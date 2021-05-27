@@ -148,11 +148,11 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
   }
 
   /// Check if the current context is available and refresh the current state
-  _computeParallaxOffset(ScrollNotification? scrollNotification,
+  void _computeParallaxOffset(ScrollNotification? scrollNotification,
       RenderObject? parallaxAreaRenderObject) {
     // The widget is not rendered if the context is null, so we skip all the computations
     if (parallaxAreaRenderObject == null) {
-      return null;
+      return;
     }
 
     final parallaxOffset = _getParallaxOffset(parallaxAreaRenderObject);
