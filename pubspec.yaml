@@ -1,6 +1,6 @@
 name: parallax_animation
-description: Adds parallax effects to any scrollable.
-version: 0.0.2
+description: This plugin enable a parallax effect in any Scrollable, simply wrap your Scrollable in a ParallaxArea and use a ParallaxWidget inside it.
+version: 0.0.3
 homepage: https://www.3rein.com
 
 environment:

@@ -3,7 +3,7 @@ A Parallax behavior for any Flutter Scrollable
 <!-- Add badges here -->
 
 This plugin enable a parallax effect in any `Scrollable`, simply wrap your `Scrollable` in a `ParallaxArea` and use a `ParallaxWidget` inside it.
-Interactive web sample [Here](http://parallax.hatdroid.com)
+Interactive web sample [Here](https://parallax.hatdroid.com)
  
 
 PageView Vertical           |  PageView Horizontal
