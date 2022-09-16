@@ -116,7 +116,8 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
   @override
   void dispose() {
     // Remove listeners on dispose
-    parallaxArea?.removeListener(parallaxListener);
+    if (parallaxArea!.listeners.isNotEmpty)
+      parallaxArea?.removeListener(parallaxListener);
     super.dispose();
   }
 
@@ -172,7 +173,7 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
     if (parallaxAreaRenderObject == null) {
       return;
     }
-
+    if (!mounted) return;
     final parallaxOffset = _getParallaxOffset(parallaxAreaRenderObject);
 
     // check if something has changed before calling set state
