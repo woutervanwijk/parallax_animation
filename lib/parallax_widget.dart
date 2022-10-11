@@ -116,8 +116,12 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
   @override
   void dispose() {
     // Remove listeners on dispose
-    if (parallaxArea!.listeners.isNotEmpty)
-      parallaxArea?.removeListener(parallaxListener);
+    try {
+      if (parallaxListener != null && parallaxArea!.listeners.isNotEmpty)
+        parallaxArea?.removeListener(parallaxListener);
+    } catch (e) {
+      debugPrint('Parallax Error $e');
+    }
     super.dispose();
   }
 
