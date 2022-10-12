@@ -117,7 +117,7 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
   void dispose() {
     // Remove listeners on dispose
     try {
-      if (parallaxListener != null && parallaxArea!.listeners.isNotEmpty)
+      if (parallaxArea!.listeners.isNotEmpty)
         parallaxArea?.removeListener(parallaxListener);
     } catch (e) {
       debugPrint('Parallax Error $e');
