@@ -98,7 +98,7 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
           "Overflows minimum value is 1, current overflow values(W: ${widget.overflowWidthFactor} - H: ${widget.overflowHeightFactor})");
     }
 
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       parallaxListener = _computeParallaxOffset;
       parallaxArea?.addListener(parallaxListener);
     });
@@ -118,7 +118,7 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
     // Remove listeners on dispose
     try {
       if (parallaxArea!.listeners.isNotEmpty)
-        parallaxArea?.removeListener(parallaxListener);
+        parallaxArea?.removeListener(parallaxArea!.listeners.first);
     } catch (e) {
       debugPrint('Parallax Error $e');
     }
